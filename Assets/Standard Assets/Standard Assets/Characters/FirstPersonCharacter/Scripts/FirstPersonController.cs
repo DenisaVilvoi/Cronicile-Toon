@@ -44,13 +44,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         // Use this for initialization
-        public void LockCursor(){
-            m_MouseLook.SetCursorLock(false);
-            m_IsWalking=false;
-        }
-         public void DeLockCursor(){
-            m_MouseLook.SetCursorLock(true);
-        }
+        //public void LockCursor(){
+        //    m_MouseLook.SetCursorLock(false);
+        //    m_IsWalking=false;
+        //}
+        // public void DeLockCursor(){
+        //    m_MouseLook.SetCursorLock(true);
+        //}
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
@@ -62,7 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+			//m_MouseLook.Init(transform , m_Camera.transform);
         }
 
 
@@ -138,7 +138,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            //m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -244,7 +244,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            //m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 
